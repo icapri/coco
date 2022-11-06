@@ -12,20 +12,6 @@ import { CocoOrientation } from './timeline.types';
 })
 export class CocoTimeline {
   /**
-   * Sets the width of the timeline item connector. Default: `2px`.
-   */
-  @Input() set connectorWidth(connectorWidth: string) {
-    this._connectorWidth = connectorWidth;
-  }
-
-  /**
-   * Gets the width of the timeline item connector. Default: `2px`.
-   */
-  get connectorWidth(): string {
-    return this._connectorWidth;
-  }
-
-  /**
    * Sets the orientation of the timeline.
    */
   @Input() set orientation(orientation: CocoOrientation) {
@@ -38,11 +24,6 @@ export class CocoTimeline {
   get orientation(): CocoOrientation {
     return this._orientation;
   }
-
-  /**
-   * Contains the width of the timeline item connector. Default: `2px`.
-   */
-  private _connectorWidth: string = '2px';
 
   /**
    * Contains the orientation of the timeline. Default: `'vertical'`.

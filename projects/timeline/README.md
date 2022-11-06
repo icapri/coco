@@ -1,24 +1,30 @@
-# Timeline
+## Timeline Angular
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## API
+* Class: `CocoTimeline`
 
-## Code scaffolding
+### Inputs
+* `orientation` The orientation of the timeline. Default: `vertical`.
 
-Run `ng generate component component-name --project timeline` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project timeline`.
-> Note: Don't forget to add `--project timeline` or else it will be added to the default project in your `angular.json` file. 
+* Class: `CocoTimelineItem`
+### Inputs
+* `connectorColor` The color of the timeline items connector. Default: `rgb(200,200,200)`.
+* `connectorLength` The length of the timeline items connector. Default: `80px`.
+* `connectorThickness` The thickness of the timeline items connector. Default: `2px`.
+* `dotColor` The color of the timeline item dot (circle). Default: `rgb(200,200,200)`.
+* `dotRadius` The radius of the timeline item dot (circle). Default: `3px`.
 
-## Build
 
-Run `ng build timeline` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
-
-After building your library with `ng build timeline`, go to the dist folder `cd dist/timeline` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test timeline` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Simple Usage Example:
+```html
+<coco-timeline orientation="vertical">
+  <coco-timeline-item>Ohio</coco-timeline-item>
+  <coco-timeline-item>New York</coco-timeline-item>
+  <coco-timeline-item>Dallas</coco-timeline-item>
+  <coco-timeline-item>Mississipi</coco-timeline-item>
+  <coco-timeline-item>Jew Jersey</coco-timeline-item>
+  <coco-timeline-item>California</coco-timeline-item>
+</coco-timeline>
+```

@@ -1,6 +1,24 @@
 {
-  "name": "timeline",
-  "version": "0.0.1",
+  "name": "timeline-angular",
+  "version": "1.0.2",
+  "description": "Timeline Component for Angular",
+  "author": "Igli Kapri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icapri/coco.git"
+  },
+  "bugs": {
+    "url": "https://github.com/icapri/coco/issues"
+  },
+  "homepage": "https://github.com/icapri/coco",
+  "keywords": [
+    "Angular",
+    "JavaScript",
+    "TypeScript",
+    "Timeline",
+    "Timeline Component"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
