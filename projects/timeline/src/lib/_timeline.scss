@@ -1,0 +1,66 @@
+@mixin coco-baseline-self {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+@mixin coco-flex($direction: row, $grow: unset, $alignItems: unset) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @if $direction ==row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  @else if ($direction==column) {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  @else {
+    @error 'Unknown flex direction "#{$direction}".';
+  }
+
+  @if $grow  !=unset {
+    @if $grow==inherit or $grow==initial or $grow==revert or $grow==revert-layer or $grow==unset or $grow>=0 {
+      -webkit-box-flex: $grow;
+      -webkit-flex-grow: $grow;
+      -ms-flex-positive: $grow;
+      flex-grow: $grow;
+    }
+
+    @else {
+      @error 'Invalid flex-grow value "#{$grow}".';
+    }
+  }
+
+  @if $alignItems  !=unset {
+    @if $alignItems==normal or $alignItems==stretch or $alignItems==center or $alignItems==start or $alignItems==end or $alignItems==flex-start or $alignItems==flex-end or $alignItems==baseline or $alignItems==first baseline or $alignItems==last baseline or $alignItems==safe center or $alignItems==unsafe center or $alignItems==inherit or $alignItems==initial or $alignItems==revert or $alignItems==revert-layer {
+      -webkit-align-items: $alignItems;
+      -webkit-box-align: $alignItems;
+      -ms-flex-align: $alignItems;
+      align-items: $alignItems;
+    }
+  }
+}
+
+@mixin coco-list {
+  list-style: none;
+  list-style-type: none;
+  margin-block-end: unset;
+  margin-block-start: unset;
+}
+
+@mixin coco-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

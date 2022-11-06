@@ -1,0 +1,83 @@
+@import 'timeline';
+
+ul[class^='coco-timeline-'],
+li[class^='coco-timeline-'] {
+  @include coco-list;
+}
+
+.coco-timeline {
+  padding: 6px 16px;
+  padding-inline-start: 6px;
+}
+
+.coco-timeline-horizontal,
+.coco-timeline-vertical .coco-timeline-item-wrapper,
+.coco-timeline-horizontal .coco-timeline-item-content,
+.coco-timeline .coco-timeline-dot {
+  @include coco-flex();
+}
+
+.coco-timeline-vertical,
+.coco-timeline-horizontal .coco-timeline-item-wrapper {
+  @include coco-flex(column);
+}
+
+coco-timeline-item:last-child .coco-timeline-connector {
+  display: none;
+}
+
+.coco-timeline-horizontal .coco-timeline-item-content {
+  margin: 6px 16px;
+}
+
+.coco-timeline-vertical .coco-timeline-item-content {
+  @include coco-flex(column);
+  margin: 6px 16px;
+}
+
+.coco-timeline .coco-timeline-block,
+.coco-timeline .coco-timeline-connector {
+  position: relative;
+}
+
+.coco-timeline-horizontal .coco-timeline-block {
+  @include coco-flex(row, 0, center);
+}
+
+.coco-timeline-vertical .coco-timeline-block {
+  @include coco-flex(column, 0, center);
+}
+
+.coco-timeline .coco-timeline-connector {
+  @include coco-flex(row, 1);
+}
+
+.coco-timeline .coco-timeline-dot {
+  @include coco-baseline-self;
+  border-style: solid;
+  border-color: transparent;
+  padding: 4px;
+  border-radius: 50%;
+  color: #fafafa;
+}
+
+.coco-timeline-horizontal .coco-timeline-dot {
+  margin: 0 11.5px;
+}
+
+.coco-timeline-vertical .coco-timeline-dot {
+  margin: 11.5px 0;
+}
+
+.coco-timeline-horizontal li.coco-timeline-item {
+  padding-inline-start: 0;
+}
+
+.coco-timeline-vertical li.coco-timeline-item {
+  padding-inline-start: 6px;
+}
+
+.coco-timeline-item {
+  content: "";
+  @include coco-flex(row, 1);
+}

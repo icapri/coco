@@ -1,0 +1,20 @@
+<li class="coco-timeline-item">
+  <div class="coco-timeline-item-wrapper">
+    <div class="coco-timeline-block">
+      <span class="coco-timeline-dot" [ngStyle]="{
+        background: dotColor,
+        'border-width': dotRadius
+      }"></span>
+      <span class="coco-timeline-connector" [ngStyle]="{
+        background: connectorColor,
+        height: isHorizontal ? connectorThickness : '',
+        width: isHorizontal ? '' : connectorThickness,
+        'min-width': isHorizontal ? connectorLength : '',
+        'min-height': isHorizontal ? '' : connectorLength
+      }"></span>
+    </div>
+    <div class="coco-timeline-item-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</li>
