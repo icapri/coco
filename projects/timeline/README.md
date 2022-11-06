@@ -1,12 +1,12 @@
 ## Timeline Angular
 
 ## API
-* Class: `CocoTimeline`
+:gift: Class: `CocoTimeline`
 
 ### Inputs
 * `orientation` The orientation of the timeline. Default: `vertical`.
 
-* Class: `CocoTimelineItem`
+:gift: Class: `CocoTimelineItem`
 ### Inputs
 * `connectorColor` The color of the timeline items connector. Default: `rgb(200,200,200)`.
 * `connectorLength` The length of the timeline items connector. Default: `80px`.
@@ -14,6 +14,11 @@
 * `dotColor` The color of the timeline item dot (circle). Default: `rgb(200,200,200)`.
 * `dotRadius` The radius of the timeline item dot (circle). Default: `3px`.
 
+## Installation
+Open a new terminal with your project folder active in it and execute:
+```
+npm install timeline-angular
+```
 
 ## Usage
 
@@ -28,3 +33,12 @@ Simple Usage Example:
   <coco-timeline-item>California</coco-timeline-item>
 </coco-timeline>
 ```
+
+## Support
+Did you find a bug or you don't like something related to this package? Then report it [here](https://github.com/icapri/coco/issues).
+
+## Contribution
+Feel free to contribute to this repository. Contribution is appreciated.
+
+## License
+Licensed under the [MIT License](https://github.com/icapri/coco/blob/main/LICENSE).
